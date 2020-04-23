@@ -1,0 +1,21 @@
+<div class="cardsContainer">
+  <div class="card" *ngFor="let event of event">
+    <div class="name">
+      <h1>{{ event.name }}</h1>
+    </div>
+    <div class="record">
+      <h1>Record:</h1>
+      <span><i class="far fa-grin-alt"></i> {{ event.recordPerson }}</span>
+      <span
+        ><i class="fas fa-flag-checkered"></i> {{ event.recordResult }}</span
+      >
+      <span><i class="far fa-calendar-alt"></i> {{ event.recordResult }}</span>
+    </div>
+    <div class="description">
+      <h2>Description</h2>
+      <p>
+        {{ event.description }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<form id="formEvent" [formGroup]="eventsForm" (ngSubmit)="onSubmit()">
+  <label for="Events">Choose an event:</label><br />
+  <select id="Events" name="Events" formControlName="event">
+    <option value="Long Jump">Long Jump</option>
+    <option value="Running">Running</option>
+    <option value="Pole Jump">Pole Jump</option>
+    <option value="Shot Put">Shot Put</option>
+    <option value="Swimming">Swimming</option>
+  </select>
+  <button type="submit">
+    Choose
+  </button>
+</form>

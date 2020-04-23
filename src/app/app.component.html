@@ -1,0 +1,32 @@
+<div id="header">
+  <div id="titleContainer">
+    <img
+      width="130"
+      height="60"
+      id="logo"
+      src="./assets/img/logo-white.png"
+      alt=""
+    />
+    <h1 id="title">DECATHLON</h1>
+  </div>
+  <!-- <div id="logoContainer"></div> -->
+</div>
+<div id="container">
+  <div class="leftSideContainer">
+    <div class="vertical-menu">
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >WELCOME</a
+      >
+      <a routerLink="athletes" routerLinkActive="active">Athletes</a>
+      <a routerLink="events" routerLinkActive="active">Events</a>
+      <a routerLink="performance" routerLinkActive="active">Performance</a>
+    </div>
+    <!-- <router-outlet name="form"></router-outlet> -->
+  </div>
+  <div class="rightSideContainer">
+    <router-outlet></router-outlet>
+  </div>
+</div>

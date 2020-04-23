@@ -1,0 +1,45 @@
+<div class="containerForForm">
+  <div class="chartContainer">
+    <canvas
+      #canvas
+      id="myChart"
+      width="400"
+      height="400"
+      style="border: 1px solid black;"
+    ></canvas>
+  </div>
+
+  <form id="formChart" [formGroup]="eventsForm" (ngSubmit)="onSubmit()">
+    <label>Choose an athlete:</label><br />
+    <select *ngIf="athlete" formControlName="athletes">
+      <option value="" disabled hidden selected>Select your option</option>
+
+      <option
+        *ngFor="let ath of athlete"
+        value="{&quot;fname&quot;:&quot;{{
+          ath?.firstName
+        }}&quot;,&quot;lname&quot;:&quot;{{ ath?.lastName }}&quot; }"
+        >{{ ath?.firstName + " " + ath?.lastName }}
+      </option>
+    </select>
+    <span
+      *ngIf="
+        eventsForm.get('athletes').value == '' &&
+        eventsForm.get('athletes').touched
+      "
+    >
+      Please select an athlete</span
+    ><br />
+    <div *ngIf="eventsForm.get('athletes').value !== ''">
+      <label>Choose an event:</label><br />
+      <select formControlName="events">
+        <option value="" disabled hidden selected>Select your option</option>
+        <option *ngFor="let event of eventsAthlete" value="{{ event.test }}">{{
+          event.test
+        }}</option>
+      </select>
+    </div>
+
+    <button type="submit">Choose</button>
+  </form>
+</div>

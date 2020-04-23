@@ -1,0 +1,22 @@
+<div id="tableContainer">
+  <table class="dataTable">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Test</th>
+      <th>Result1</th>
+      <th>Result2</th>
+      <th>Result3</th>
+    </tr>
+    <tr *ngFor="let athlete of athletes">
+      <td>{{ athlete.firstName }}</td>
+      <td>{{ athlete.lastName }}</td>
+      <td><img src="{{ imgTest }}" /></td>
+      <td>{{ athlete.result1 }}</td>
+      <td>{{ athlete.result2 }}</td>
+      <td>{{ athlete.result3 }}</td>
+    </tr>
+  </table>
+
+  <app-athletes-form></app-athletes-form>
+</div>
