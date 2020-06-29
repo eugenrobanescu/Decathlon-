@@ -39,12 +39,11 @@ body {
   justify-content: space-between;
   flex-direction: column;
   background: #444;
-  height: 100%;
+
   width: 15%;
 }
 .rightSideContainer {
   width: 85%;
-  height: 100%;
 }
 
 /* MENU */
@@ -382,5 +381,26 @@ img {
   .next,
   .text {
     font-size: 11px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .dataTable td,
+  .dataTable th {
+    padding: 6px;
+    font-size: small;
+  }
+  .leftSideContainer {
+    width: 100%;
+  }
+  #container {
+    flex-direction: column;
+  }
+  #myChart {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #myChart {
+    width: 300px;
   }
 }

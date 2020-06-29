@@ -11,16 +11,16 @@ const appRoutes: Routes = [
   { path: "", component: WelcomeComponent },
   {
     path: "athletes",
-    component: AthletesComponent
+    component: AthletesComponent,
   },
-  // { path: "athletes", component: AthletesFormComponent },
+
   { path: "events", component: EventsComponent },
-  { path: "performance", component: PerformanceComponent }
+  { path: "performance", component: PerformanceComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutesService {
   constructor() {}
