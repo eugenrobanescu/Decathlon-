@@ -433,4 +433,35 @@ img {
     padding: 4px;
     font-size: 9.5px;
   }
+  @media only screen and (max-width: 450px) {
+    #tableContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+      margin-right: 0;
+    }
+    .rightSideContainer {
+      width: 100%;
+    }
+    #logo {
+      display: none;
+    }
+    #textDecathlon h1 {
+      font-size: 20px;
+    }
+    body {
+      padding: 0;
+    }
+    .card {
+      min-width: 250px;
+      height: 700px;
+    }
+    .dataTable td,
+    .dataTable th {
+      padding: 0px;
+      font-size: 9.5px;
+    }
+  }
 }
