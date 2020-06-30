@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
   box-sizing: border-box;
@@ -191,8 +194,7 @@ body {
 
 /* CHART */
 .chartContainer {
-  width: 600px;
-  height: 600px;
+  width: 60%;
 }
 .containerForForm {
   background-color: white;
@@ -384,23 +386,51 @@ img {
   }
 }
 @media only screen and (max-width: 1000px) {
+  #textDecathlon {
+    flex-direction: column;
+  }
+  #title {
+    font-size: 25px;
+  }
   .dataTable td,
   .dataTable th {
     padding: 6px;
     font-size: small;
   }
+  .rightSideContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .leftSideContainer {
     width: 100%;
   }
+  .chartContainer {
+    width: 76%;
+  }
+  .containerForForm {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #formChart {
+    margin-top: 50px;
+    width: 80%;
+  }
   #container {
     flex-direction: column;
-  }
-  #myChart {
-    width: 500px;
+    justify-content: center;
+    align-items: center;
   }
 }
-@media only screen and (max-width: 800px) {
-  #myChart {
-    width: 300px;
+@media only screen and (max-width: 768px) {
+  .card {
+    min-width: 250px;
+    height: 700px;
+  }
+  .dataTable td,
+  .dataTable th {
+    padding: 4px;
+    font-size: 9.5px;
   }
 }
